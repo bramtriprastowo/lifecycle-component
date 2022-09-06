@@ -40,7 +40,7 @@ export class Fetch extends React.Component{
 
                         {dataNews.map((item, i) => {
                             return <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                            <div className="card border-success mx-auto">
+                            <div className="card border-success mx-auto" key={i}>
                                 <img src={item['urlToImage']} alt={item['title']} className="card-img-top"/>
                                 <div className="card-body">
                                     <h5>{item['title']}</h5>
@@ -60,8 +60,7 @@ export class Fetch extends React.Component{
 
     //Melakukan fetch berita menggunakan componentDidMount
     componentDidMount(){
-        this.fetchNews(url1);   
-        console.log('componentDidMount');
+        this.fetchNews(url1);
     }
 
     // Menambahkan fitur live search dengan componentDidUpdate

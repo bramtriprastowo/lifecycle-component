@@ -25,7 +25,7 @@ export class Fetch extends React.Component{
         return(
             <>
                 {/* Kolom Pencarian */}
-                <div className='container mt-5 mb-5 sticky-top'>
+                <div className='container my-4 py-3 sticky-top' style={{ backgroundColor: '#E9FFEE' }}>
                     <div className='row'>
                         <div className='input-group'>
                             <input type='text' className='form-control' name='search' placeholder='Search news' onChange={e => this.setState({search: e.target.value})}/>
